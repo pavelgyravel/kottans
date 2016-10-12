@@ -1,0 +1,26 @@
+.container
+  .row
+    .col-lg-6.col-lg-push-3
+      %h1 Kottans ruby test task
+      - if flash[:error]
+        %p.alert.alert-warning= flash[:error]
+      %form(method='post' id='js_message_form' action='/' )
+        .form-group
+          %label(for='js_message') Message
+          %textarea.form-control#js_message(name='message[message]')Pavlo
+        .form-group
+          .radio
+            %label
+              %input(type='radio' value='1' name='message[destroy_type]' checked)
+              Destroy message after given number of link visit
+          .radio
+            %label
+              %input(type='radio' value='2' name='message[destroy_type]')
+              Destroy message after given time
+        .form-group
+          %label(for='destroy') Enter number of visits (or number of minutes) after message will be destroyed
+          %input.form-control#destroy(type='text' name='message[destroy_cond]' value='10')
+        .form-group
+          %label(for='password') Enter password to encrypt message
+          %input.form-control#js_password(type='text' value='123')
+        %input.btn.btn-primary(type='submit' value='Submit')
