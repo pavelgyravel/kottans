@@ -11,6 +11,7 @@ gem 'json'
 gem 'whenever'
 gem 'rake'
 gem 'rspec'
+gem 'haml'
 
 group :development do
  gem 'sqlite3'
