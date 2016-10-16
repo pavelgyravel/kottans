@@ -27,9 +27,6 @@ $(document).ready(function(){
 		var form = $(ev.target);
 		var message = form.find('#js_message');
 		var password = form.find('#js_password');
-
-		console.log(message.val(),password.val());
-
 		message.val(CryptoJS.AES.decrypt(message.val(),password.val()).toString(CryptoJS.enc.Utf8));
 
 		return false;

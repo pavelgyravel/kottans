@@ -4,4 +4,3 @@
 *.sass-cache
 /pkg
 /doc/api
-/public/bower_components
