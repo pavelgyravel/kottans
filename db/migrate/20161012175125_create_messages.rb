@@ -5,6 +5,7 @@ class CreateMessages < ActiveRecord::Migration
       t.string :url
       t.string :destroy_type
       t.string :destroy_cond
+      t.datetime :destroy_time
       t.timestamps
     end
  end

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20161012175125) do
     t.string   "url"
     t.string   "destroy_type"
     t.string   "destroy_cond"
+    t.datetime "destroy_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

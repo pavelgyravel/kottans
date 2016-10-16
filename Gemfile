@@ -7,6 +7,10 @@ gem "activerecord"
 gem "sinatra-activerecord"
 gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
+gem 'json'
+gem 'whenever'
+gem 'rake'
+gem 'rspec'
 
 group :development do
  gem 'sqlite3'
@@ -14,5 +18,5 @@ group :development do
 end
 
 group :production do
- #gem 'pg'
+ gem 'pg'
 end

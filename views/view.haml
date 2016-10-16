@@ -1,1 +1,21 @@
-view.haml
+.container
+    .row
+        .col-lg-6.col-lg-push-3
+            %h1 Kottans ruby test task
+            - if flash[:error]
+                %p.alert.alert-warning= flash[:error]
+            %p.alert.alert-warning 
+                - if @message.destroy_type == '1'
+                    Message will be destroy in #{@message.destroy_cond} visits.
+                - else 
+                    Message will be destroy at  #{@message.destroy_time.localtime}
+
+            %form#encode_message
+                .form-group
+                    %label(for='js_message') Your message: (ener pass end press "Encrypt message")
+                    %textarea.form-control#js_message(name='message[message]' rows='7')= @message.message
+                .form-group
+                    %label(for='password') Enter password to encrypt message
+                    %input.form-control#js_password(type='text' )
+                .form-group
+                    %input.btn.btn-primary(type='submit' value='Encrypt message')
